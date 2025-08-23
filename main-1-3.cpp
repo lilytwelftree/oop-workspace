@@ -7,6 +7,6 @@ int main() {
     int size = 5;
     int desired_number = 2;
     int result = num_count(numbers, size, desired_number); 
-    std::cout << desired_number << " is  included in the array" << result << " times." >> std::endl;
+    std::cout << desired_number << " is  included in the array" << result << " times." << std::endl;
     return 0;
 }
