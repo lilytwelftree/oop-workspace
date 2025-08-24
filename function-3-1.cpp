@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 bool is_fanarray(int array[], int n){
     if (n < 1){
