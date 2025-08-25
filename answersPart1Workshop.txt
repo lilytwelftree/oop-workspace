@@ -1,0 +1,50 @@
+
+	1	Transform 75 from base 10 to base 2
+Number:     75   37   18    9    4    2    1
+Divide by:   2    2    2    2    2    2    2
+Quotient:   37   18    9    4    2    1    0
+Remainder:   1    1    0    1    0    0    1
+
+Answer: 1001011 (read remainders left to right)
+
+2. Transform 110111011 from base 2 to base 10
+Position:   8    7    6    5    4    3    2    1    0
+Power:    256  128   64   32   16    8    4    2    1
+Digit:      1    1    0    1    1    1    0    1    1
+Value:    256  128    0   32   16    8    0    2    1
+
+Sum: 256 + 128 + 32 + 16 + 8 + 2 + 1 = 443
+
+3. Transform 75 form base 10 to 8
+Number:     75    9    1
+Divide by:   8    8    8
+Quotient:    9    1    0
+Remainder:   3    1    1
+
+Answer: 113 (read remainders left to right)
+
+	4	Transform 1346742 from base 8 to base 10.
+Position:      6        5       4      3     2    1   0
+Power:    262144    32768    4096    512    64    8   1
+Digit:         1        3       4      6     7    4   2
+Value:    262144    98304   16384   3072   448   32   2
+
+Sum: 262144 + 98304 + 16384 + 3072 + 448 + 32 + 2 = 380,386
+
+5. Transform 75 from base 10 to base 16
+Number:     75    4
+Divide by:  16   16
+Quotient:    4    0
+Remainder:  11    4
+Hex:         B    4
+
+Answer: 4B (read remainders left to right)
+
+6. Transform 64FEA from base 16 to base 10.
+Position:     4       3      2     1    0
+Power:    65536    4096    256    16    1
+Digit:        6       4      F     E    A
+Decimal:      6       4     15    14   10
+Value:   393216   16384   3840   224   10
+
+Sum: 393216 + 16384 + 3840 + 224 + 10 = 413,674
