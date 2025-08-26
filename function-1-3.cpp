@@ -40,6 +40,6 @@ void count_digits(int array[4][4]){
         }
     }
 
-    std::cout << "0:" << number_zeros << ";1:" << number_ones << ";2:" << number_twos << ";3:" << number_threes << ";4:" << number_fours << ";5:" << number_fives << ";6:" << number_sixes << ";7:" << number_sevens << ";8:" << number_eights << ";9:" << number_nines << std::endl;
+    std::cout << "0:" << number_zeros << ";1:" << number_ones << ";2:" << number_twos << ";3:" << number_threes << ";4:" << number_fours << ";5:" << number_fives << ";6:" << number_sixes << ";7:" << number_sevens << ";8:" << number_eights << ";9:" << number_nines << ";" << std::endl;
     
 }
