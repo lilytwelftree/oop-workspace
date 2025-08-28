@@ -8,7 +8,7 @@ int sum_diagonal(int array[4][4]){
         diagonalSum = diagonalSum + array[i][i];
     }
 
-    std::cout << diagonalSum << std::endl ;
+    // std::cout << diagonalSum << std::endl;
 
     return diagonalSum;
 }

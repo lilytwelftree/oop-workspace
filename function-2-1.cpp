@@ -2,14 +2,19 @@
 #include <string>
 
 void print_binary_str(std::string decimal_number) {
-    for(int i = 0; i < decimal_number.length(); i++) {
-        int digit = decimal_number[i] - '0'; 
-        
-        if (digit % 2 == 0) {
-            std::cout << "0";
-        } else {
-            std::cout << "1";
-        }
+    int num = std::stoi(decimal_number);
+    
+    if (num == 0) {
+        std::cout << "0" << std::endl;
+        return;
     }
-    std::cout << std::endl;
+    
+    std::string binary = "";
+    
+    while (num > 0) {
+        binary = (char)('0' + num % 2) + binary;
+        num /= 2;
+    }
+    
+    std::cout << binary << std::endl;
 }
