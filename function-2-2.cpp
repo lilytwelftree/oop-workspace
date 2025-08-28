@@ -13,7 +13,7 @@ int binary_to_int(int binary_digits[], int number_of_digits){
 
     }
 
-    std::cout << sum;
+    // std::cout << sum;
 
     return sum;
 }
