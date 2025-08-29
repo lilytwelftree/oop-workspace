@@ -3,7 +3,7 @@
 
 void print_binary_str(std::string decimal_number) {
     int num = std::stoi(decimal_number);
-    std::cout << num << std::endl;
+    // std::cout << num << std::endl;
     
     if (num == 0) {
         std::cout << "0" << std::endl;
