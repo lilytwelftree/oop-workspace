@@ -2,40 +2,37 @@
 #include "workshop.h"
 using namespace std;
 
-int main (){
+int main() {
+    // Test changeValue function
     double number = 11.00;
     double *number_ptr = &number;
 
     // std::cout << "number is currently " << number << std::endl;
-
     changeValue(number_ptr);
-
     // std::cout << "number is now " << number << std::endl;
 
-    double array[] ={1.0,2.0,3.0,4.0};
-    double *array_ptr = array; // we make it equal the array not the location in memory bc arrays alreay have it built in
+    // Test printArray function
+    double array[] = {1.0, 2.0, 3.0, 4.0};
+    double *array_ptr = array;
     int size = 4;
 
     printArray(array_ptr, size);
 
-    double array[] ={1.0,2.0,3.0,4.0};
-    double *array_ptr = array; 
-    int size = 4;
-
+    // Test arrayMax function (reusing the same array)
     double result = arrayMax(array_ptr, size);
+    // std::cout << result << std::endl;
 
-    // std:: cout << result << std::endl;
-
-    int size = 5;
+    // Test dynamicArray function
+    int dynamicSize = 5;
     double initValue = 7.5;
     
-    double* myArray = dynamicArray(size, initValue);
+    double* myArray = dynamicArray(dynamicSize, initValue);
     
-    double maxValue = arrayMax(myArray, size);
+    double maxValue = arrayMax(myArray, dynamicSize);
     // cout << "Maximum value: " << maxValue << endl;
     
     // cout << "Array elements: ";
-    // for (int i = 0; i < size; i++) {
+    // for (int i = 0; i < dynamicSize; i++) {
     //     cout << myArray[i] << " ";
     // }
     // cout << endl;
