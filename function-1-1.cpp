@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <memory>
-#include "Vehicle.h"
 #include "Car.h"
 #include "Bus.h"
 #include "Motorbike.h"
@@ -9,7 +7,7 @@
 using namespace std;
 
 int main() {
-    vector<unique_ptr<Vehicle>> parkingLot;
+    vector<Vehicle*> parkingLot;
     int numVehicles;
     
     cout << "Number of vehicles: ";
@@ -25,18 +23,22 @@ int main() {
         cin >> vehicleId;
         
         if (vehicleType == "Car") {
-            parkingLot.push_back(make_unique<Car>(vehicleId));
+            parkingLot.push_back(new Car(vehicleId));
         }
         else if (vehicleType == "Bus") {
-            parkingLot.push_back(make_unique<Bus>(vehicleId));
+            parkingLot.push_back(new Bus(vehicleId));
         }
         else if (vehicleType == "Motorbike") {
-            parkingLot.push_back(make_unique<Motorbike>(vehicleId));
+            parkingLot.push_back(new Motorbike(vehicleId));
         }
     }
     
-    for (const auto& vehicle : parkingLot) {
-        cout << "ID " << vehicle->getId() << ": " << vehicle->getParkingDuration() << " seconds" << endl;
+    for (int i = 0; i < parkingLot.size(); i++) {
+        cout << "ID " << parkingLot[i]->getId() << ": " << parkingLot[i]->getParkingDuration() << " seconds" << endl;
+    }
+    
+    for (int i = 0; i < parkingLot.size(); i++) {
+        delete parkingLot[i];
     }
     
     return 0;

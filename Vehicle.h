@@ -1,3 +1,6 @@
+#ifndef VEHICLE_H
+#define VEHICLE_H
+
 #include <ctime>
 
 class Vehicle {
@@ -14,3 +17,5 @@ public:
 protected:
     std::time_t getTimeOfEntry() const;
 };
+
+#endif
