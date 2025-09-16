@@ -1,12 +1,21 @@
 #include <iostream>
-#ifndef TV_H
-#define TV_H
+#include "TV.h"
 
-class TV {
-    private:
+TV::TV()
+    {};
 
-    public:
+TV::TV(int powerRating, double screenSize)
+    : screenSize(screenSize), Appliance(powerRating){};
 
+void TV::setScreenSize(double screenSize){
+    this->screenSize = screenSize;
 };
 
-#endif
+double TV::getScreenSize(){
+    return screenSize;
+};
+
+double TV::getPowerConsumption(){
+    double power_consumption = powerRating * (screenSize / 10);
+    return power_consumption;
+};

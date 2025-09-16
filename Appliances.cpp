@@ -34,7 +34,3 @@ void Appliance::set_powerRating(int updatePower){
 bool Appliance::get_isOn(){
     return isOn;
 };
-
-// void Appliance::set_isOn(bool updateOn){
-//     isOn = updateOn;
-// };
