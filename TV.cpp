@@ -2,7 +2,7 @@
 #include "TV.h"
 
 TV::TV()
-    {};
+    : Appliance(){};
 
 TV::TV(int powerRating, double screenSize)
     : screenSize(screenSize), Appliance(powerRating){};
