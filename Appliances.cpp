@@ -27,9 +27,9 @@ int Appliance::get_powerRating(){
     return powerRating;
 };
 
-// void Appliance::set_powerRating(int updatePower){
-//     powerRating = updatePower;
-// };
+void Appliance::set_powerRating(int updatePower){
+    powerRating = updatePower;
+};
 
 bool Appliance::get_isOn(){
     return isOn;
