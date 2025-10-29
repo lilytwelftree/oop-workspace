@@ -22,6 +22,6 @@ int Card::getCost() const {
 int Card::getTotalCards() {
   return totalCards;
 }
-int main(){
-    return 0;
-}
+// int main(){
+//     return 0;
+// }
