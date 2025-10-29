@@ -9,6 +9,7 @@ Card::Card(const std::string& n, int c) : name(n), cost(c) {
 }
 
 Card:: ~Card() {
+    totalCards --;
 }
 
 std::string Card::getName() const {
