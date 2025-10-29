@@ -20,8 +20,17 @@ Deck::Deck(const Deck& other) {
     // TODO: copy/clone card from the deck and add it to teh new deck
     // NOTE: Increment Card count static in each new Card's constructor (happens
     // automatically)
-    cards.push_back(c); //copies each card pointer from the other deck into new deck's cards vector.
-  }
+
+    // shallow copy 
+    // cards.push_back(c); //copies each card pointer from the other deck into new deck's cards vector.
+  
+    // deep copy
+    if(Creature* creature = dynamic_cast<Creature*>(c)){
+        cards.push_back(new Creature(*creature));
+    } else if (Land* land = dynamic_cast<Land*>(c)){
+        cards.push_back(new Land(*land));
+    }
+    }
 }
 
 Deck::~Deck() {
