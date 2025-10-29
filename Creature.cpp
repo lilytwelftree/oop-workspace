@@ -28,12 +28,21 @@ Creature::~Creature() {
   totalCreatures --;
 }
 
+std::string Creature::getTypeNameString() const {
+  switch(type) {
+    case CreatureType::WARRIOR: return "Warrior";
+    case CreatureType::MAGE: return "Mage";
+    case CreatureType::ARCHER: return "Archer";
+  }
+  return "Unknown";
+}
+
 void Creature::printInfo() const {
   // TODO: print creature details in format:
   // "Creature - <name> (Cost <cost>): Creature Type=<typeName>,
   // Attack=<attack>, Defense=<defense>"
   std::cout << "Creature - " << name << " (Cost " << cost << "): "
-            << "Creature Type=" << static_cast<int>(type) << ", "
+            << "Creature Type=" << getTypeNameString() << ", "
             << "Attack=" << attack << ", "
             << "Defense=" << defense << std::endl;
 }

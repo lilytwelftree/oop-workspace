@@ -32,6 +32,7 @@ class Creature : public Card {
   int getAttack() const;
   int getDefense() const;
   CreatureType getCreatureType() const;
+  std::string getTypeNameString() const;
   static int getTotalCreatures();
   Card* clone() const override;
   Card::Type getType() const override;
