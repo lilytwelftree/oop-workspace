@@ -24,11 +24,20 @@ Land::~Land() {
   totalLands --;
 }
 
+std::string Land::getTypeNameString() const {
+  switch(landType) {
+    case LandType::FOREST: return "Forest";
+    case LandType::MOUNTAIN: return "Mountain";
+    case LandType::SWAMP: return "Swamp";
+  }
+  return "Unknown";
+}
+
 void Land::printInfo() const {
   // TODO: print land details in format:
   // "Land - <name> (Cost <cost>): <TypeName> land."
 
-  std::cout << "Land - " << name << " (Cost " << cost << "): " << static_cast<int>(landType) << " land. " << std::endl;
+  std::cout << "Land - " << name << " (Cost " << cost << "): " << getTypeNameString() << " land. " << std::endl;
 }
 
 Land::LandType Land::getLandType() const {

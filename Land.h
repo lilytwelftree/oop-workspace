@@ -23,7 +23,8 @@ class Land : public Card {
   Land(const std::string& name, int cost, LandType type);
   Land(const Land& other);
   ~Land();
-
+  
+  std::string getTypeNameString() const;  
   void printInfo() const override;
   LandType getLandType() const;
   static int getTotalLands();
